@@ -43,12 +43,12 @@
        const queryString = window.location.search
        const parameterURL = new URLSearchParams(queryString);
        const docId = parameterURL.get('docId')
-       const pembeli = await ambilPenjual(docId);
+       const penjual = await ambilPenjual(docId);
        
        elemenNamaPenjual.value = penjual.nama;
        elemenAlamat.value = penjual.alamat;
        elemenNoTlpn.value = penjual.noTlpn;
-       elemenEmail.value = penjual.email
+       elemenEmail.value = penjual.email;
        
        tombolUbah.addEventListener('click', async function(el) {
        el.preventDefault();
